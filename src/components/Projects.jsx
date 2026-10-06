@@ -3,6 +3,9 @@ import { FaArrowRight, FaGithub } from "react-icons/fa";
 import "./Projects.css";
 import bixboStoreImage from "../assets/bixbo-store.png";
 import klinikImage from "../assets/klinik.png";
+import qurbanImage from "../assets/Qurban-Management.png";
+import schoolImage from "../assets/School-Sysytem-Management.png";
+import minouImage from "../assets/Minou-Creme.png";
 
 function Projects() {
   const projects = [
@@ -33,7 +36,8 @@ function Projects() {
       tech: ["PHP", "Laravel", "Livewire", "MySQL"],
       link: "",
       github: "https://github.com/BiBO-sheep/qurban-app-management",
-      year: "2026"
+      year: "2026",
+      image: qurbanImage
     },
     {
       title: "School System Management",
@@ -41,7 +45,18 @@ function Projects() {
       tech: ["PHP", "Laravel", "MySQL"],
       link: "",
       github: "https://github.com/BiBO-sheep/student-management",
-      year: "2026"
+      year: "2026",
+      image: schoolImage
+    },
+    {
+      title: "Minou Creme",
+      description: "Website landing page dan katalog produk interaktif untuk Minou Creme. Dibangun dengan fokus pada UI yang modern dan responsif untuk menampilkan produk dessert secara menarik.",
+      tech: ["React", "Vite", "CSS", "Vercel"],
+      link: "https://minou-creme-7efy.vercel.app/",
+      linkText: "Visit Website",
+      github: "https://github.com/BiBO-sheep/Minou-Creme",
+      year: "2026",
+      image: minouImage
     }
   ];
 
@@ -99,7 +114,7 @@ function Projects() {
                 <div className="project-links">
                   {project.link && (
                     <a href={project.link} className="project-link-primary" target="_blank" rel="noopener noreferrer">
-                      <span>View Case Study</span>
+                      <span>{project.linkText || "View Case Study"}</span>
                       <FaArrowRight className="arrow-icon" />
                     </a>
                   )}
