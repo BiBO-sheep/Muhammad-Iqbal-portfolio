@@ -230,6 +230,23 @@
   .project-row:hover .project-title {
     transform: none;
   }
+
+  .project-info {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .project-meta {
+    justify-content: center;
+  }
+  
+  .project-tech-stack {
+    justify-content: center;
+  }
+  
+  .project-links {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 576px) {
